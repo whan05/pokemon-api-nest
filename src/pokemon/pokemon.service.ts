@@ -23,7 +23,7 @@ export class PokemonService {
     private readonly configService: ConfigService,
   ) {
 
-    this.defaultLimit = configService.get<number>('defaultLimit') ?? 7
+    this.defaultLimit = Number(configService.get<number>('defaultLimit'))
   }
 
 
